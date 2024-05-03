@@ -1,3 +1,4 @@
+import { Injectable } from '@nestjs/common';
 import { User } from '@prisma/client';
 import { UserRepository } from 'src/repositories/user/user-repository';
 
@@ -8,6 +9,7 @@ interface FindByIdUserRequest {
 interface FindByIdUserResponse {
   user: User;
 }
+@Injectable()
 export class FindByIdUserUseCase {
   constructor(private userRepository: UserRepository) {}
 

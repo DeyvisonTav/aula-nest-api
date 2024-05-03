@@ -1,5 +1,7 @@
+import { Injectable } from '@nestjs/common';
 import { User } from 'src/entities/user.entity';
 
+@Injectable()
 export abstract class UserRepository {
   abstract save(user: User): Promise<User>;
   abstract findByEmail(email: string): Promise<User>;

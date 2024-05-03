@@ -1,7 +1,9 @@
 import { User } from 'src/entities/user.entity';
 import { UserRepository } from '../user/user-repository';
 import { PrismaService } from './prisma.service';
+import { Injectable } from '@nestjs/common';
 
+@Injectable()
 export class UserPrismaRepository implements UserRepository {
   constructor(private prisma: PrismaService) {}
   async save(user: User): Promise<User> {
