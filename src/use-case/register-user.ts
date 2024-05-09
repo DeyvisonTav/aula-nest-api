@@ -9,7 +9,7 @@ interface RegisterUserRequest {
   password: string;
 }
 
-interface RegisterUserResponse {
+export interface RegisterUserResponse {
   user: User;
 }
 
